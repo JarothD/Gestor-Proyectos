@@ -24,7 +24,6 @@ exports.crearTarea = async (req, res) => {
             return res.status(401).json({msg: 'No Autorizado'});
         }
 
-
         // Creamos la tarea
         const tarea = new Tarea(req.body);
         await tarea.save();
