@@ -12,19 +12,18 @@ conectarDB();
 app.use(cors());
 
 // Habilitar express.json
-app.use(express.json ({ extended: true }));
-
+app.use(express.json ({extended:true}));
 
 // Puerto de la app
-const port = process.env.PORT;// || 5000;
-//app.listen(process.env.PORT || 5000);
+const port = process.env.PORT || 4000;
 
 // Importar Rutas
 app.use('/api/usuarios', require('./routes/usuarios'));
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/proyectos', require('./routes/proyectos'));
 app.use('/api/tareas', require('./routes/tareas'));
+
 // Arrancar la app
-app.listen(port, () => {
+app.listen(port, '0.0.0.0', () => {
     console.log(`el servidor esta funcionando en el puerto ${port}`)
 }); 

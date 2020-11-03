@@ -1,5 +1,5 @@
 const Proyecto = require('../models/Proyecto');
-const { validationResult } =require('express-validator')
+const { validationResult } = require('express-validator')
 
 exports.crearProyecto = async (req, res) => {
     
@@ -52,7 +52,7 @@ exports.actualizarProyecto = async( req, res ) =>{
     const nuevoProyecto = {};
 
     if(nombre){
-        nuevoProyecto.nombre = nombre
+        nuevoProyecto.nombre = nombre;
     }
     try {
         

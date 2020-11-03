@@ -20,7 +20,7 @@ router.get('/',
     proyectoController.obtenerProyectos
 );
 // Actualizar proyectos via ID
-router.put('/:_id',
+router.put('/:id',
     auth,
     [
         check('nombre', 'El nombre del proyecto es obligatorio').not().isEmpty()
@@ -29,7 +29,7 @@ router.put('/:_id',
 );
 
 // Eliminar un Proyecto
-router.delete('/:_id',
+router.delete('/:id',
     auth,    
     proyectoController.eliminarProyecto
 );
